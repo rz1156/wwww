@@ -46,4 +46,6 @@ canvas{
 
     pointer-events:none;
 
+    transform: scaleX(-1);
+
 }

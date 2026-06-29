@@ -66,8 +66,6 @@ function onResults(results){
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
 
-    ctx.save();
-
     ctx.clearRect(0,0,canvas.width,canvas.height);
 
     if(results.multiHandLandmarks){
@@ -75,45 +73,27 @@ function onResults(results){
         for(const landmarks of results.multiHandLandmarks){
 
             drawConnectors(
-
                 ctx,
-
                 landmarks,
-
                 HAND_CONNECTIONS,
-
                 {
-
                     color:"#ffffff",
-
                     lineWidth:2
-
                 }
-
             );
 
             drawLandmarks(
-
                 ctx,
-
                 landmarks,
-
                 {
-
                     color:"#00ffff",
-
                     fillColor:"#ffffff",
-
                     radius:5
-
                 }
-
             );
 
         }
 
     }
-
-    ctx.restore();
 
 }
